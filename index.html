@@ -1033,6 +1033,217 @@
       .acc-price { font-size: 16px; }
       .acc-save { margin-left: 0; display: block; margin-top: 2px; }
     }
+    /* ============================================================
+   EXTRA SMALL MOBILE FIX
+   ============================================================ */
+@media (max-width: 390px) {
+  :root {
+    --pad: 18px;
+    --radius-md: 20px;
+    --radius-lg: 26px;
+  }
+
+  body {
+    font-size: 15.5px;
+    line-height: 1.5;
+  }
+
+  .nav {
+    padding: 12px var(--pad);
+  }
+
+  .logo {
+    font-size: 18px;
+    max-width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 108px var(--pad) 92px;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .h1 {
+    font-size: clamp(34px, 10.2vw, 40px);
+    line-height: 1.03;
+    letter-spacing: -0.018em;
+  }
+
+  .hero h1 {
+    margin-bottom: 22px;
+  }
+
+  .hero .lead {
+    font-size: 15.5px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    max-width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 15px 22px;
+    font-size: 14px;
+  }
+
+  .hero-scroll {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin-top: 42px;
+    font-size: 20px;
+  }
+
+  .hero-scroll::before {
+    width: 44px;
+  }
+
+  .section-inner {
+    padding: 68px var(--pad);
+  }
+
+  .section-head {
+    margin-bottom: 34px;
+  }
+
+  .h2 {
+    font-size: clamp(29px, 9vw, 36px);
+    line-height: 1.08;
+  }
+
+  .h3 {
+    font-size: 22px;
+  }
+
+  .lead {
+    font-size: 15.5px;
+    line-height: 1.55;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    gap: 9px;
+  }
+
+  .eyebrow::before {
+    width: 18px;
+  }
+
+  .problem-card {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+
+  .problem-card .ttl {
+    font-size: 22px;
+    line-height: 1.18;
+  }
+
+  .problem-card .desc {
+    font-size: 15px;
+  }
+
+  .manifesto blockquote {
+    font-size: 31px;
+    line-height: 1.08;
+  }
+
+  .about {
+    padding: 68px var(--pad);
+  }
+
+  .about-img {
+    border-radius: 26px;
+    max-height: none;
+    width: 100%;
+  }
+
+  .about-story {
+    font-size: 20px;
+    line-height: 1.42;
+  }
+
+  .about-highlight {
+    font-size: 23px;
+    line-height: 1.18;
+    padding: 24px 20px;
+  }
+
+  .about-path {
+    font-size: 19px;
+    line-height: 1.43;
+  }
+
+  .about-meta {
+    gap: 20px;
+  }
+
+  .acc-head {
+    gap: 14px;
+  }
+
+  .acc-title {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .acc-price {
+    font-size: 15px;
+    white-space: normal;
+  }
+
+  .topic-list {
+    margin-top: 34px;
+  }
+
+  .topic-row .ttl {
+    font-size: 21px;
+    line-height: 1.2;
+  }
+
+  .topic-row .desc {
+    font-size: 13.5px;
+  }
+
+  .testimonials-grid {
+    margin-top: 34px;
+  }
+
+  .testimonial {
+    padding: 26px 20px;
+    border-radius: 20px;
+  }
+
+  .testimonial-quote {
+    font-size: 17px;
+    line-height: 1.45;
+  }
+
+  .final {
+    padding: 78px var(--pad);
+  }
+
+  .final .h2 {
+    max-width: 100%;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
   </style>
 </head>
 
