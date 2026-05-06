@@ -1,0 +1,1563 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0e1d14" />
+  <meta name="description" content="Анна Суладзе — КПТ-психотерапевт. Работаю с тревогой, самокритикой, страхом одиночества и выходом из деструктивных отношений. Онлайн." />
+  <title>Анна Суладзе — КПТ-психотерапевт</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,0..100,0..1&display=swap"
+  rel="stylesheet"
+/>
+
+  <style>
+    /* ============================================================
+       DESIGN TOKENS — forest + cream + vivid green + terracotta
+       ============================================================ */
+    :root {
+      --cream:        #ede4ce;
+      --cream-deep:   #e1d6be;
+      --cream-soft:   #f3ecd6;
+
+      --forest:       #0e1d14;
+      --forest-deep:  #08130a;
+      --forest-soft:  #2a3d2e;
+      --forest-mute:  #5a6e58;
+
+      --moss:         #3d6b2e;
+      --moss-light:   #6b9a4e;
+      --terracotta:   #b85c34;
+
+      --line:         rgba(14, 29, 20, 0.13);
+      --line-soft:    rgba(14, 29, 20, 0.06);
+      --line-dark:    rgba(237, 228, 206, 0.14);
+      --cream-mute:   rgba(237, 228, 206, 0.7);
+
+     --display: "Fraunces", Georgia, "Times New Roman", serif;
+--body:    "Fraunces", Georgia, "Times New Roman", serif;
+      --max: 1240px;
+      --pad: clamp(22px, 6vw, 96px);
+      --radius-sm: 14px;
+      --radius-md: 24px;
+      --radius-lg: 36px;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body {
+      font-family: var(--body);
+      background: var(--cream);
+      color: var(--forest);
+      font-size: 17px;
+      line-height: 1.55;
+      letter-spacing: 0.005em;
+      overflow-x: hidden;
+      font-variation-settings: "opsz" 14;
+    }
+    a { color: inherit; text-decoration: none; }
+    img, video { display: block; max-width: 100%; }
+    button { font: inherit; cursor: pointer; background: none; border: none; color: inherit; }
+    ::selection { background: var(--moss); color: var(--cream); }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      pointer-events: none;
+      opacity: 0.04;
+      mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* ============================================================
+       TYPOGRAPHY
+       ============================================================ */
+    .h1, .h2, .h3 {
+      font-family: var(--display);
+      font-weight: 400;
+      letter-spacing: -0.014em;
+      text-transform: lowercase;
+      font-style: normal;
+      font-optical-sizing: auto;
+    }
+    .h1 {
+      font-size: clamp(38px, 7.4vw, 92px);
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+      font-variation-settings: "WONK" 1, "SOFT" 30, "opsz" 144;
+    }
+    .h2 {
+      font-size: clamp(30px, 5vw, 64px);
+      line-height: 1.04;
+      font-variation-settings: "WONK" 1, "SOFT" 25, "opsz" 96;
+    }
+    .h3 {
+      font-size: clamp(22px, 2.4vw, 30px);
+      line-height: 1.18;
+      font-variation-settings: "WONK" 0, "SOFT" 20, "opsz" 48;
+    }
+
+    em, i {
+      font-style: normal;
+      font-weight: 500;
+    }
+    .h1 em, .h2 em, .h3 em {
+      font-style: normal;
+      font-weight: 500;
+      color: var(--moss);
+    }
+
+    .lead {
+      font-size: clamp(16px, 1.35vw, 19px);
+      line-height: 1.55;
+      color: var(--forest-soft);
+      max-width: 58ch;
+      font-variation-settings: "opsz" 14;
+    }
+
+    .eyebrow {
+      font-family: var(--body);
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: lowercase;
+      font-weight: 400;
+      color: var(--forest-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.55;
+      flex-shrink: 0;
+    }
+    .eyebrow a {
+      color: var(--terracotta);
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 1px;
+      transition: opacity .25s ease;
+    }
+    .eyebrow a:hover { opacity: 0.7; }
+
+    /* ============================================================
+       NAVIGATION
+       ============================================================ */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 18px var(--pad);
+      color: var(--cream);
+      border-bottom: 1px solid transparent;
+      transition: background .35s ease, backdrop-filter .35s ease,
+                  border-color .35s ease, color .35s ease, padding .25s ease;
+    }
+    .nav.scrolled {
+      background: rgba(237, 228, 206, 0.86);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom-color: var(--line);
+      color: var(--forest);
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+    .logo {
+      font-family: var(--display);
+      font-size: clamp(18px, 2vw, 22px);
+      font-weight: 500;
+      letter-spacing: -0.005em;
+      text-transform: capitalize;
+      line-height: 1;
+      color: inherit;
+      white-space: nowrap;
+      flex-shrink: 0;
+      min-width: 0;
+      font-variation-settings: "WONK" 1, "SOFT" 30, "opsz" 48;
+    }
+    .logo em {
+      font-style: normal;
+      font-weight: 400;
+      opacity: 0.7;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: clamp(18px, 3vw, 36px);
+      align-items: center;
+      font-size: 14px;
+      letter-spacing: 0.005em;
+      text-transform: lowercase;
+      min-width: 0;
+    }
+    .nav-links a { white-space: nowrap; transition: opacity .25s; }
+    .nav-links a:hover { opacity: 0.6; }
+    .nav-cta {
+      padding: 10px 22px;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 13px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background .25s, color .25s, border-color .25s;
+    }
+    .nav:not(.scrolled) .nav-cta:hover {
+      background: var(--cream); color: var(--forest); border-color: var(--cream);
+    }
+    .nav.scrolled .nav-cta:hover {
+      background: var(--moss); color: var(--cream); border-color: var(--moss);
+    }
+    .nav-burger {
+      display: none;
+      width: 32px; height: 32px;
+      flex-shrink: 0;
+      flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 5px;
+    }
+    .nav-burger span {
+      display: block;
+      width: 22px; height: 1.5px;
+      background: currentColor;
+      transition: transform .3s, opacity .3s;
+    }
+    .nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* ============================================================
+       BUTTONS
+       ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      gap: 10px;
+      padding: 18px 32px;
+      border-radius: 999px;
+      font-family: var(--body);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      text-transform: lowercase;
+      border: 1px solid transparent;
+      transition: transform .3s ease, box-shadow .3s ease,
+                  background .3s ease, color .3s ease, border-color .3s ease;
+    }
+    .btn-primary { background: var(--moss); color: var(--cream); }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(61, 107, 46, 0.36);
+      background: var(--moss-light);
+    }
+    .btn-cream { background: var(--cream); color: var(--forest); }
+    .btn-cream:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.22);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--forest);
+      border-color: var(--forest);
+    }
+    .btn-ghost:hover { background: var(--forest); color: var(--cream); }
+    .btn-arrow::after {
+      content: "→";
+      font-size: 1.05em;
+      transition: transform .3s ease;
+    }
+    .btn-arrow:hover::after { transform: translateX(5px); }
+
+    /* ============================================================
+       SECTIONS
+       ============================================================ */
+    section { position: relative; }
+    .section--full { max-width: none; margin: 0; padding: 0; }
+    .section-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: clamp(80px, 11vw, 150px) var(--pad);
+    }
+    .section-head { max-width: 820px; margin-bottom: clamp(44px, 5vw, 72px); }
+    .section-head .eyebrow { margin-bottom: 24px; }
+    .section-head .h2 + .lead { margin-top: 24px; }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100svh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      padding: 130px var(--pad) clamp(140px, 18vw, 200px);
+      color: var(--cream);
+      overflow: hidden;
+      isolation: isolate;
+      background:
+        radial-gradient(ellipse 80% 60% at 30% 65%, rgba(50, 80, 60, 0.5), transparent 70%),
+        radial-gradient(ellipse 60% 50% at 82% 20%, rgba(60, 100, 50, 0.32), transparent 65%),
+        linear-gradient(165deg, #142a1c 0%, #08130a 100%);
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      pointer-events: none;
+      filter: grayscale(0.1) brightness(1.05) contrast(1);
+      animation: kenBurns 32s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+    @keyframes kenBurns {
+      0%   { transform: scale(1.04) translate(0%, 0%); }
+      100% { transform: scale(1.12) translate(-1.5%, -1.5%); }
+    }
+
+    .hero-veil {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg,
+      rgba(8, 19, 10, 0.7) 0%,
+      rgba(8, 19, 10, 0.55) 35%,
+      rgba(8, 19, 10, 0.45) 65%,
+      rgba(8, 19, 10, 0.85) 100%),
+    radial-gradient(ellipse 80% 50% at 30% 35%, rgba(8, 19, 10, 0.4), transparent 70%);
+}
+
+    .hero-content { max-width: 880px; position: relative; }
+    .hero .eyebrow { color: var(--cream); opacity: 0.85; margin-bottom: 30px; }
+    .hero .eyebrow::before { background: var(--cream); }
+.hero h1 {
+  color: var(--cream);
+  margin-bottom: 30px;
+  text-shadow: 0 2px 24px rgba(8, 19, 10, 0.45);
+}
+.hero .lead {
+  text-shadow: 0 1px 16px rgba(8, 19, 10, 0.4);
+}    .hero h1 em { color: var(--moss-light); font-weight: 500; }
+    .hero .lead {
+      color: rgba(237, 228, 206, 0.78);
+      margin-bottom: 44px;
+      max-width: 56ch;
+    text-shadow: 0 1px 16px rgba(8, 19, 10, 0.4);
+
+    }
+
+    /* Hero scroll link — large, raised, second CTA */
+    .hero-scroll {
+      position: absolute;
+      left: var(--pad);
+      bottom: clamp(60px, 9vw, 110px);
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      color: rgba(237, 228, 206, 0.85);
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(20px, 2vw, 28px);
+      line-height: 1;
+      letter-spacing: -0.01em;
+      text-transform: lowercase;
+      text-decoration: none;
+      transition: color .3s ease, gap .3s ease;
+      z-index: 2;
+      font-variation-settings: "WONK" 1, "SOFT" 25, "opsz" 60;
+    }
+    .hero-scroll::before {
+      content: "";
+      display: block;
+      width: clamp(48px, 5vw, 72px);
+      height: 1px;
+      background: linear-gradient(to right, rgba(237, 228, 206, 0.85), rgba(237, 228, 206, 0.05));
+      transform-origin: left;
+      animation: scrollPulse 2.6s ease-in-out infinite;
+    }
+    .hero-scroll:hover { color: var(--cream); gap: 24px; }
+    .hero-scroll:hover::before {
+      background: linear-gradient(to right, var(--cream), rgba(237, 228, 206, 0.2));
+    }
+    @keyframes scrollPulse {
+      0%, 100% { transform: scaleX(0.5); opacity: 0.45; }
+      50%      { transform: scaleX(1);   opacity: 1; }
+    }
+
+    /* ============================================================
+       PROBLEM
+       ============================================================ */
+    .problem { background: var(--cream-deep); }
+    .problem-list { display: grid; gap: 14px; margin-top: 20px; }
+    .problem-card {
+      display: grid;
+      gap: 14px;
+      padding: clamp(28px, 3.6vw, 44px) clamp(26px, 3.5vw, 52px);
+      background: var(--cream-soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      position: relative;
+      overflow: hidden;
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+    .problem-card::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0;
+      width: 3px; height: 100%;
+      background: var(--moss);
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+    .problem-card:hover {
+      transform: translateX(4px);
+      box-shadow: 0 18px 40px rgba(14, 29, 20, 0.07);
+    }
+    .problem-card:hover::before { opacity: 1; }
+    .problem-card .ttl {
+      font-family: var(--display);
+      font-style: normal;
+      font-weight: 500;
+      font-size: clamp(22px, 2.8vw, 32px);
+      line-height: 1.18;
+      letter-spacing: -0.012em;
+      color: var(--forest);
+      text-transform: lowercase;
+      font-variation-settings: "WONK" 1, "SOFT" 25, "opsz" 72;
+    }
+    .problem-card .desc {
+      font-size: clamp(15px, 1.15vw, 16px);
+      line-height: 1.6;
+      color: var(--forest-soft);
+      max-width: 70ch;
+    }
+
+    /* ============================================================
+       MANIFESTO
+       ============================================================ */
+    .manifesto {
+      background: var(--forest-deep);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    .manifesto::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.1;
+      mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n2)'/%3E%3C/svg%3E");
+    }
+    .manifesto::after {
+      content: "";
+      position: absolute;
+      top: -10%; left: -10%;
+      width: 55%;
+      aspect-ratio: 1;
+      background: radial-gradient(circle, rgba(107, 154, 78, 0.22), transparent 65%);
+      filter: blur(60px);
+      pointer-events: none;
+    }
+    .manifesto .section-inner { position: relative; z-index: 1; }
+    .manifesto .eyebrow { color: var(--cream-mute); margin-bottom: 30px; }
+    .manifesto blockquote {
+      font-family: var(--display);
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(32px, 4.8vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -0.018em;
+      max-width: 1000px;
+      text-transform: lowercase;
+      color: var(--cream);
+      font-variation-settings: "WONK" 1, "SOFT" 35, "opsz" 144;
+    }
+    .manifesto blockquote em {
+      font-style: normal;
+      font-weight: 500;
+      color: var(--moss-light);
+    }
+    .manifesto-sig {
+      margin-top: 36px;
+      font-family: var(--display);
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(18px, 1.5vw, 22px);
+      color: rgba(237, 228, 206, 0.6);
+      letter-spacing: 0.005em;
+      text-transform: lowercase;
+      font-variation-settings: "WONK" 0, "SOFT" 30, "opsz" 36;
+    }
+
+    /* ============================================================
+       ABOUT
+       ============================================================ */
+    .about { padding: clamp(80px, 11vw, 150px) var(--pad); max-width: var(--max); margin: 0 auto; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: clamp(36px, 5vw, 80px);
+      align-items: center;
+    }
+    .about-img {
+      aspect-ratio: 4/5;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(rgba(8, 19, 10, 0.18), rgba(8, 19, 10, 0.38)),
+        url('images/about.jpg') center / cover no-repeat,
+        linear-gradient(160deg, var(--moss), var(--forest));
+      box-shadow: 0 30px 70px rgba(8, 19, 10, 0.18);
+    }
+    .about-text .eyebrow { margin-bottom: 22px; }
+    .about-text .h2 { margin-bottom: 28px; }
+    .about-text p {
+  margin-bottom: 22px;
+}
+
+.about-story {
+  font-family: var(--display);
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(21px, 1.9vw, 27px);
+  line-height: 1.42;
+  color: var(--forest);
+  letter-spacing: -0.008em;
+  text-transform: lowercase;
+  font-variation-settings: "WONK" 0, "SOFT" 25, "opsz" 48;
+}
+ .keep-case {
+  text-transform: none;
+}
+.about-highlight {
+  margin: 34px 0;
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: var(--radius-md);
+  background: var(--forest);
+  color: var(--cream);
+  font-family: var(--display);
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(24px, 2.6vw, 36px);
+  line-height: 1.18;
+  letter-spacing: -0.014em;
+  text-transform: lowercase;
+  box-shadow: 0 24px 60px rgba(8, 19, 10, 0.14);
+  font-variation-settings: "WONK" 1, "SOFT" 30, "opsz" 72;
+}
+
+.about-path {
+  font-family: var(--display);
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(20px, 1.7vw, 25px);
+  line-height: 1.45;
+  color: var(--forest-soft);
+  letter-spacing: -0.006em;
+  text-transform: lowercase;
+  font-variation-settings: "WONK" 0, "SOFT" 22, "opsz" 48;
+}
+    .about-meta {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .about-meta dt {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: lowercase;
+      color: var(--forest-mute);
+      margin-bottom: 8px;
+    }
+    .about-meta dd { font-size: 14px; line-height: 1.5; color: var(--forest); }
+
+    /* ============================================================
+       ACCORDION
+       ============================================================ */
+    .accordion {
+      margin-top: clamp(36px, 5vw, 56px);
+      border-top: 1px solid var(--line);
+    }
+    .accordion-on-dark { border-top-color: var(--line-dark); }
+
+    .acc-item { border-bottom: 1px solid var(--line); }
+    .accordion-on-dark .acc-item { border-bottom-color: var(--line-dark); }
+
+    .acc-head {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: clamp(22px, 2.6vw, 32px) 0;
+      text-align: left;
+      color: inherit;
+      transition: padding .35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .acc-head:hover { padding-left: 8px; }
+
+    .acc-text {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px 22px;
+      flex: 1;
+      min-width: 0;
+    }
+    .acc-title {
+      font-family: var(--display);
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(22px, 2.8vw, 34px);
+      line-height: 1.18;
+      letter-spacing: -0.014em;
+      text-transform: lowercase;
+      color: inherit;
+      font-variation-settings: "WONK" 1, "SOFT" 25, "opsz" 72;
+    }
+    .acc-price {
+      font-family: var(--display);
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(18px, 2vw, 24px);
+      line-height: 1.2;
+      color: var(--forest-soft);
+      letter-spacing: -0.005em;
+      white-space: nowrap;
+      font-variation-settings: "WONK" 0, "SOFT" 20, "opsz" 36;
+    }
+    .accordion-on-dark .acc-price { color: rgba(237, 228, 206, 0.7); }
+    .acc-save {
+      font-family: var(--body);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: lowercase;
+      color: var(--terracotta);
+      margin-left: 10px;
+      white-space: nowrap;
+    }
+
+    .acc-icon {
+      width: 32px; height: 32px;
+      flex-shrink: 0;
+      position: relative;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      opacity: 0.5;
+      transition: opacity .25s ease, transform .4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .acc-icon::before, .acc-icon::after {
+      content: "";
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 12px; height: 1px;
+      background: currentColor;
+      transition: transform .4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .acc-icon::before { transform: translate(-50%, -50%); }
+    .acc-icon::after { transform: translate(-50%, -50%) rotate(90deg); }
+    .acc-head:hover .acc-icon { opacity: 1; }
+    .acc-item.open .acc-icon { transform: rotate(180deg); opacity: 1; }
+    .acc-item.open .acc-icon::after { transform: translate(-50%, -50%) rotate(0deg); }
+
+    .acc-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .55s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .acc-body-inner {
+      padding: 0 0 clamp(28px, 3vw, 40px);
+      padding-right: clamp(0px, 5vw, 60px);
+      max-width: 64ch;
+    }
+    .acc-body-inner p {
+      font-size: clamp(15px, 1.2vw, 17px);
+      line-height: 1.65;
+      color: var(--forest-soft);
+    }
+
+    /* ============================================================
+       METHOD
+       ============================================================ */
+    .method { background: var(--cream-deep); }
+
+    /* ============================================================
+       TOPICS
+       ============================================================ */
+    .topics {
+      background: var(--forest-deep);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    .topics::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.08;
+      mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n3'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n3)'/%3E%3C/svg%3E");
+    }
+    .topics .section-inner { position: relative; z-index: 1; }
+    .topics .eyebrow { color: var(--cream-mute); }
+    .topics .h2 { color: var(--cream); }
+
+    .topic-list { margin-top: 50px; max-width: 980px; }
+    .topic-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: baseline;
+      gap: 32px;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line-dark);
+      transition: padding .35s ease;
+    }
+    .topic-row:hover { padding-left: 14px; }
+    .topic-row .ttl {
+      font-family: var(--display);
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(20px, 2.4vw, 30px);
+      line-height: 1.2;
+      letter-spacing: -0.012em;
+      text-transform: lowercase;
+      font-variation-settings: "WONK" 1, "SOFT" 25, "opsz" 60;
+    }
+    .topic-row .desc {
+      font-size: 14px;
+      line-height: 1.45;
+      color: rgba(237, 228, 206, 0.6);
+      max-width: 320px;
+      text-align: right;
+      text-transform: lowercase;
+    }
+
+    /* ============================================================
+       TESTIMONIALS
+       ============================================================ */
+    .testimonials { background: var(--cream); }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(16px, 1.6vw, 24px);
+      margin-top: clamp(40px, 5vw, 60px);
+    }
+
+    .testimonial {
+      padding: clamp(32px, 3.5vw, 48px) clamp(28px, 3.2vw, 44px);
+      background: var(--cream-soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(20px, 2.4vw, 28px);
+      transition: transform .4s ease, box-shadow .4s ease;
+    }
+    .testimonial:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 48px rgba(14, 29, 20, 0.08);
+    }
+    .testimonial-quote {
+      font-family: var(--display);
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(18px, 1.7vw, 22px);
+      line-height: 1.45;
+      letter-spacing: -0.005em;
+      color: var(--forest);
+      text-transform: none;
+      font-variation-settings: "WONK" 1, "SOFT" 25, "opsz" 36;
+      flex: 1;
+    }
+    .testimonial-meta {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      padding-top: clamp(18px, 2vw, 24px);
+      border-top: 1px solid var(--line);
+    }
+    .testimonial-name {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: -0.005em;
+      color: var(--forest);
+      text-transform: none;
+    }
+    .testimonial-detail {
+      font-family: var(--body);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: none;
+      color: var(--forest-mute);
+    }
+
+    /* ============================================================
+       PRICING
+       ============================================================ */
+    .pricing { background: var(--cream-deep); }
+    .pricing-cta-wrap { margin-top: clamp(40px, 5vw, 56px); }
+
+    /* ============================================================
+       FINAL CTA
+       ============================================================ */
+    .final {
+      text-align: center;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(61, 107, 46, 0.18), transparent 70%),
+        var(--cream);
+      padding: clamp(100px, 13vw, 170px) var(--pad);
+    }
+    .final .eyebrow { justify-content: center; margin-bottom: 28px; }
+    .final .h2 { max-width: 18ch; margin: 0 auto 28px; }
+    .final .h2 em { color: var(--terracotta); font-weight: 500; }
+    .final .lead { margin: 0 auto 40px; text-align: center; }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    footer {
+      background: var(--forest-deep);
+      color: rgba(237, 228, 206, 0.7);
+      padding: 64px var(--pad) 36px;
+    }
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--line-dark);
+    }
+    .footer-brand {
+      font-family: var(--display);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28px;
+      color: var(--cream);
+      margin-bottom: 14px;
+      letter-spacing: -0.005em;
+      text-transform: capitalize;
+      font-variation-settings: "WONK" 1, "SOFT" 30, "opsz" 60;
+    }
+    .footer-brand em {
+      font-style: normal;
+      font-weight: 400;
+      opacity: 0.7;
+    }
+    .footer-tagline {
+      font-size: 14px;
+      max-width: 32ch;
+      line-height: 1.55;
+      color: rgba(237, 228, 206, 0.65);
+    }
+    .footer-col h4 {
+      font-family: var(--body);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: lowercase;
+      color: rgba(237, 228, 206, 0.55);
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+    .footer-col a {
+      display: block;
+      padding: 5px 0;
+      font-size: 14px;
+      color: rgba(237, 228, 206, 0.78);
+      text-transform: lowercase;
+      transition: color .25s, transform .25s;
+    }
+    .footer-col a:hover { color: var(--moss-light); transform: translateX(3px); }
+    .footer-bottom {
+      max-width: var(--max);
+      margin: 28px auto 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 12px;
+      color: rgba(237, 228, 206, 0.42);
+      letter-spacing: 0.02em;
+      text-transform: lowercase;
+      flex-wrap: wrap;
+    }
+    .footer-bottom a { transition: color .25s; }
+    .footer-bottom a:hover { color: var(--moss-light); }
+
+    /* ============================================================
+       REVEAL
+       ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(48px);
+      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.in { opacity: 1; transform: none; }
+
+    .reveal-stagger > * {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity .9s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform .9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-stagger.in > * { opacity: 1; transform: none; }
+    .reveal-stagger.in > *:nth-child(1) { transition-delay: 0.05s; }
+    .reveal-stagger.in > *:nth-child(2) { transition-delay: 0.18s; }
+    .reveal-stagger.in > *:nth-child(3) { transition-delay: 0.31s; }
+    .reveal-stagger.in > *:nth-child(4) { transition-delay: 0.44s; }
+    .reveal-stagger.in > *:nth-child(5) { transition-delay: 0.57s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal-stagger > * { opacity: 1; transform: none; transition: none; }
+      .hero-scroll::before, .hero-video { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 1080px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img { max-height: 520px; max-width: 480px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav { padding: 14px var(--pad); }
+      .nav-links { display: none; }
+      .nav-burger { display: flex; }
+
+      .nav-drawer {
+        position: fixed;
+        inset: 0;
+        background: var(--forest-deep);
+        color: var(--cream);
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 36px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .35s ease;
+      }
+      .nav-drawer.open { opacity: 1; pointer-events: auto; }
+      .nav-drawer a {
+        font-family: var(--display);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        letter-spacing: -0.014em;
+        text-transform: lowercase;
+        font-variation-settings: "WONK" 1, "SOFT" 30, "opsz" 96;
+      }
+      .nav-drawer .nav-cta {
+        font-family: var(--body);
+        font-size: 14px;
+        margin-top: 14px;
+        font-weight: 500;
+      }
+
+.hero {
+  padding: clamp(140px, 24vw, 180px) var(--pad) clamp(80px, 12vw, 120px);
+  align-items: center;
+}
+
+      .topic-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 22px 0;
+      }
+      .topic-row .desc {
+        text-align: left;
+        max-width: 100%;
+        opacity: 0.85;
+      }
+
+      .problem-card { padding: 26px 22px; }
+
+      .acc-head { gap: 18px; padding: 22px 0; }
+      .acc-head:hover { padding-left: 0; }
+      .acc-text { gap: 6px 16px; }
+      .acc-icon { width: 28px; height: 28px; }
+      .acc-icon::before, .acc-icon::after { width: 10px; }
+
+      .testimonials-grid { grid-template-columns: 1fr; gap: 12px; }
+      .testimonial-meta { flex-direction: column; align-items: flex-start; gap: 4px; }
+
+      .footer-bottom { font-size: 11px; }
+    }
+
+    @media (max-width: 480px) {
+      :root { --pad: 22px; }
+      body { font-size: 16px; }
+      .btn { padding: 16px 26px; font-size: 14px; }
+      .about-meta { grid-template-columns: 1fr; }
+
+      .acc-text {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .acc-title { font-size: 21px; line-height: 1.22; }
+      .acc-price { font-size: 16px; }
+      .acc-save { margin-left: 0; display: block; margin-top: 2px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#top" class="logo">Анна <em>Суладзе</em></a>
+
+    <nav class="nav-links">
+      <a href="#about">обо мне</a>
+      <a href="#topics">с чем я работаю</a>
+      <a href="#contact" class="nav-cta">записаться</a>
+    </nav>
+
+    <button class="nav-burger" id="navBurger" aria-label="меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+    <a href="#about">обо мне</a>
+    <a href="#topics">с чем я работаю</a>
+    <a href="#contact" class="nav-cta">записаться</a>
+  </div>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <video
+        class="hero-video"
+        id="heroVideo"
+        autoplay muted loop playsinline
+        webkit-playsinline="true"
+        preload="auto"
+        disablepictureinpicture
+        x-webkit-airplay="deny"
+        controlslist="nodownload nofullscreen noremoteplayback noplaybackrate"
+        poster="images/hero-poster.jpg"
+        aria-hidden="true">
+        <source src="videos/hero.mp4" type="video/mp4" />
+        <source src="videos/hero.webm" type="video/webm" />
+      </video>
+      <div class="hero-veil"></div>
+
+      <div class="hero-content">
+        <span class="eyebrow">кпт-психотерапия · онлайн</span>
+
+        <h1 class="h1">
+          психолог для женщин,<br />
+          уставших <em>выживать</em><br />
+          и готовых начать <em>жить</em>
+        </h1>
+
+        <p class="lead">
+          помогаю перестроить фундамент,<br />
+          когда снаружи «успех и уверенность»,<br />
+          а внутри — пустота, потерянность и боль.
+        </p>
+
+        <a href="#contact" class="btn btn-cream btn-arrow">записаться</a>
+      </div>
+
+      <a href="#about" class="hero-scroll" aria-label="прокрутить к разделу обо мне">обо мне</a>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="section--full problem">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="eyebrow">
+            <a href="#contact">запишись</a> ко мне на сессию, если знакомо хотя бы одно
+          </span>
+        </div>
+
+        <div class="problem-list reveal-stagger">
+          <article class="problem-card">
+            <p class="ttl">ты не чувствуешь своей «достаточности»</p>
+            <p class="desc">тебе всё время кажется, что нужно стать ещё умнее, красивее, стройнее или успешнее, чтобы тебя наконец-то по-настоящему полюбили.</p>
+          </article>
+
+          <article class="problem-card">
+            <p class="ttl">тебе трудно защищать свои границы
+            </p>
+            <p class="desc">ты скорее промолчишь и «проглотишь» обиду, чем рискнёшь кого-то расстроить своим отказом или честным мнением.</p>
+          </article>
+
+          <article class="problem-card">
+            <p class="ttl">для тебя любовь — это доказательство</p>
+            <p class="desc">ты привыкла заслуживать внимание, доказывать свою нужность и веришь, что без драмы и боли отношений не бывает.</p>
+          </article>
+
+          <article class="problem-card">
+            <p class="ttl">тебе страшно остаться одной</p>
+            <p class="desc">этот страх настолько парализующий, что ты готова годами терпеть холод, обесценивание или физическое неприятие партнёра, лишь бы не столкнуться с пустотой внутри.</p>
+          </article>
+
+          <article class="problem-card">
+            <p class="ttl">ты привыкла заглушать себя</p>
+            <p class="desc">будь то алкоголь, чтобы вынести близость с нелюбимым человеком, или бесконечный контроль, чтобы не дать волю «неправильным» чувствам.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="section--full manifesto">
+      <div class="section-inner">
+        <span class="eyebrow">хочу чтоб ты знала</span>
+
+        <blockquote>
+          ты не сломана. ты слишком долго жила по сценарию, <em>который писала не ты</em>
+        </blockquote>
+
+        <p class="manifesto-sig">— и его можно переписать</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="about-grid">
+        <div class="about-img" aria-hidden="true"></div>
+
+        <div class="about-text">
+          <span class="eyebrow">обо мне</span>
+         <h2 class="h2">
+  привет, я <span class="keep-case">Аня</span> <br />
+  и я знаю, что такое жить не свою жизнь
+</h2>
+          <p class="about-story">
+  долгое время я была мастером адаптации: с детства делала то, что говорили родители, соглашалась на решения, которые за меня принимали мужчины, жила в абьюзе и страхе быть отвергнутой. свою боль я заливала алкоголем, секс использовала как доказательство собственной нужности, ненавидела этот мир и задыхалась от перманентного несчастья, под маской удобной улыбашки. моя жизнь была фильмом, где сценарием управлял кто угодно, но не я.
+</p>
+
+<p class="about-highlight">
+  сейчас я знаю, что меня достаточно и я нужна такая, какая я есть — и готова помочь тебе обрести это ощущение.
+</p>
+
+<p class="about-path">
+  мой путь в психологию — это огромный опыт глубокой перестройки и приобретения себя. я чувствую твою боль и понимаю, как ты устала с ней жить. со мной ты можешь быть собой: плакать, ругаться, ошибаться — правильного или неправильного тут нет.
+</p>
+
+          <dl class="about-meta">
+            <div>
+              <dt>образование</dt>
+              <dd>ооо «онлайн институт smart» · психология в социальной сфере 450 ч. · кпт 750 ч+</dd>
+            </div>
+            <div>
+              <dt>подход</dt>
+              <dd>кпт, арт-терапия</dd>
+            </div>
+            <div>
+              <dt>дополнительно</dt>
+              <dd>мак-карты, mindfulness, телесные практики</dd>
+            </div>
+            <div>
+              <dt>личная терапия</dt>
+              <dd>3 года · регулярная супервизия</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- METHOD -->
+    <section class="section--full method">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="eyebrow">метод</span>
+          <h2 class="h2">КПТ - доказательный метод с четкой структурой </h2>
+          <p class="lead">кпт (когнитивно-поведенческая терапия) — это не просто «поговорить», это новые убеждения и знания, помогающие справляться с любым штормом в повседневной жизни. это мощная база на которую я наслаиваю дополнительные инструменты — нажми, чтобы узнать больше.</p>
+        </div>
+
+        <div class="accordion reveal-stagger" data-accordion>
+          <div class="acc-item">
+            <button class="acc-head" aria-expanded="false">
+              <span class="acc-text">
+                <span class="acc-title">мак-карты</span>
+              </span>
+              <span class="acc-icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc-body">
+              <div class="acc-body-inner">
+                <p>метафорические карты — «субтитры» к твоему подсознанию. когда трудно сформулировать проблему словами, картинка помогает достать истинный ответ из глубины за считанные минуты.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-head" aria-expanded="false">
+              <span class="acc-text">
+                <span class="acc-title">арт-терапия</span>
+              </span>
+              <span class="acc-icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc-body">
+              <div class="acc-body-inner">
+                <p>способ прожить и выплеснуть ту боль, которую страшно произнести вслух. тут нет задачи нарисовать шедевр — ты рисуешь свою свободу, свой гнев и своё новое «я».</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-head" aria-expanded="false">
+              <span class="acc-text">
+                <span class="acc-title">майндфулнес</span>
+              </span>
+              <span class="acc-icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc-body">
+              <div class="acc-body-inner">
+                <p>твоя кнопка «пауза». научу тебя возвращаться в момент «здесь и сейчас», чтобы тревога о будущем или стыд за прошлое больше не имели над тобой власти.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICS -->
+    <section class="section--full topics" id="topics">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="eyebrow">с чем работаю</span>
+          <h2 class="h2">запросы, с которыми ко мне приходят чаще всего</h2>
+        </div>
+
+        <div class="topic-list reveal-stagger">
+          <div class="topic-row">
+            <span class="ttl">поиск собственного «я» вне родительских ожиданий</span>
+            <span class="desc">сможешь говорить «нет», когда неудобно, и «да» — своим истинным желаниям</span>
+          </div>
+          <div class="topic-row">
+            <span class="ttl">перфекционизм и внутренний критик</span>
+            <span class="desc">научу чувствовать свою цену без внешних доказательств и синдрома отложенной жизни</span>
+          </div>
+          <div class="topic-row">
+            <span class="ttl">возвращение чувств: тело, желания, радость</span>
+            <span class="desc">для ощущения жизни больше не нужны будут алкоголь и пиковые эмоции</span>
+          </div>
+          <div class="topic-row">
+            <span class="ttl">страх одиночества и потеря себя в паре</span>
+            <span class="desc">ты станешь себе самым любимым и важным человеком — и больше никогда не будешь одна</span>
+          </div>
+          <div class="topic-row">
+            <span class="ttl">деструктивные и созависимые отношения</span>
+            <span class="desc">научу выходить из отношений, которые не вызывают ничего, кроме отторжения</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section--full testimonials">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="eyebrow">отзывы</span>
+          <h2 class="h2">что говорят те, кто уже <em>прошёл этот путь</em></h2>
+        </div>
+
+        <div class="testimonials-grid reveal-stagger">
+          <article class="testimonial">
+            <p class="testimonial-quote">Аня! вчера случилась ситуация, в который я отследила, на сколько спокойнее я стала реагировать на маму!!! точнее я вообще не стала реагировать на полученную информацию! У меня даже не екнуло нигде!!! Шок! Я собой так горжусь, а тебя благодарю!</p>
+            <div class="testimonial-meta">
+              <span class="testimonial-name">Мария, 27 лет</span>
+              <span class="testimonial-detail">Москва</span>
+            </div>
+          </article>
+
+          <article class="testimonial">
+            <p class="testimonial-quote">Анна, сегодня наткнулась на фразу «Лучше победить себя, чем выиграть тысячу сражений» и поняла, что моя победа над собой заключится в том, что я научусь ЗАМЕЧАТЬ свой путь, БЕРЕЧЬ себя на этом пути и РАДОВАТЬСЯ уже пройденному! как же круто! спасибо вам, за эти осознания!</p>
+            <div class="testimonial-meta">
+              <span class="testimonial-name">Екатерина, 37 лет</span>
+              <span class="testimonial-detail">Санкт-Петербург</span>
+            </div>
+          </article>
+
+          <article class="testimonial">
+            <p class="testimonial-quote">Для меня это огромный шаг из моей пучины прокрастинации и страха выбора. И я хочу поблагодарить тебя за то, что я уже прокачала себя во многих вопросах и не останавливаюсь на этом! когда я начинала свою терапию, я и представить не могла, как оно всё повернется и в чем я себя найду!</p>
+            <div class="testimonial-meta">
+              <span class="testimonial-name">Анастасия, 30 лет</span>
+              <span class="testimonial-detail">Париж</span>
+            </div>
+          </article>
+
+          <article class="testimonial">
+            <p class="testimonial-quote">ехала домой, смотрела в окошко и поймала инсайт, что наконец-то в ресурсе, а не в раздрае, как было 25 лет до этого! поняла, что теперь бóльшую часть времени чувствую себя счастливой, мне хочется творить, узнавать что-то новое, общаться. я понимаю, что впереди еще много работы, но спасибо тебе за то, что я уже начала жить по-новому.</p>
+            <div class="testimonial-meta">
+              <span class="testimonial-name">Дарья, 26 лет</span>
+              <span class="testimonial-detail">Буэнос-Айрес</span>
+            </div>
+          </article>
+          <span class="eyebrow">отзывы опубликованы с согласия клиентов и изменением персональных данных для сохранения конфиденциальности</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section--full pricing">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="eyebrow">сессии и тарифы</span>
+        </div>
+
+        <div class="accordion reveal-stagger" data-accordion>
+          <div class="acc-item">
+            <button class="acc-head" aria-expanded="false">
+              <span class="acc-text">
+                <span class="acc-title">установочная сессия — знакомство</span>
+                <span class="acc-price">0&nbsp;₽</span>
+              </span>
+              <span class="acc-icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc-body">
+              <div class="acc-body-inner">
+                <p>30-минутная онлайн-сессия, на которой мы обсуждаем темы, с которыми вы хотите поработать  </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-head" aria-expanded="false">
+              <span class="acc-text">
+                <span class="acc-title">терапевтическая сессия</span>
+                <span class="acc-price">3&nbsp;000&nbsp;₽</span>
+              </span>
+              <span class="acc-icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc-body">
+              <div class="acc-body-inner">
+                <p>детальный разбор текущей ситуации, выявление глубинных убеждений, разработка плана работы, рескриптинг установок</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-head" aria-expanded="false">
+              <span class="acc-text">
+                <span class="acc-title">пакет из 8 терапевтических сессий</span>
+                <span class="acc-price">21&nbsp;600&nbsp;₽<span class="acc-save">экономия 10%</span></span>
+              </span>
+              <span class="acc-icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc-body">
+              <div class="acc-body-inner">
+                <p>двухмесячный терапевтический цикл глубокой перестройки</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-cta-wrap">
+          <a href="#contact" class="btn btn-primary btn-arrow">записаться</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final" id="contact">
+      <span class="eyebrow">первый шаг</span>
+      <h2 class="h2">можно терпеть и дальше,<br/>а можно <em>попробовать иначе</em></h2>
+      <p class="lead">напиши мне пару слов о том, что происходит. я отвечу в течение дня и предложу время для первой сессии.</p>
+      <a href="https://t.me/Suladze?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BD%D0%BD%D0%B0.%20%D0%A5%D0%BE%D1%82%D0%B5%D0%BB%D0%B0%20%D0%B1%D1%8B%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%83%D1%8E%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BE%D1%87%D0%BD%D1%83%D1%8E%20%D1%81%D0%B5%D1%81%D1%81%D0%B8%D1%8E." class="btn btn-primary btn-arrow">написать</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <p class="footer-brand">Анна <em>Суладзе</em></p>
+        <p class="footer-tagline">кпт-психотерапия для тех, кто хочет перестать выживать и научиться жить. онлайн.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>навигация</h4>
+        <a href="#about">обо мне</a>
+        <a href="#topics">с чем я работаю</a>
+        <a href="#contact">записаться</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>контакты</h4>
+        <a href="mailto:suladze.k@gmail.com?subject=Запись%20на%20установочную%20сессию&body=Здравствуйте%2C%20Анна.%20Хотела%20бы%20записаться%20к%20вам%20на%20бесплатную%20установочную%20сессию.">suladze.k@gmail.com</a>
+        <a href="https://t.me/Suladze?text=Здравствуйте%2C%20Анна.%20Хотела%20бы%20записаться%20к%20вам%20на%20бесплатную%20установочную%20сессию.">telegram</a>
+        <a href="https://www.instagram.com/suladze_a">instagram</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Анна Суладзе · все права защищены</span>
+      <span>сайт — <a href="https://www.azartestudio.art/">azarte</a></span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var nav = document.getElementById('nav');
+      var burger = document.getElementById('navBurger');
+      var drawer = document.getElementById('navDrawer');
+      var heroVideo = document.getElementById('heroVideo');
+
+      // scroll-aware nav
+      var lastY = -1;
+      function onScroll() {
+        var y = window.scrollY || window.pageYOffset;
+        if (y === lastY) return;
+        lastY = y;
+        if (y > 60) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // mobile drawer
+      function closeDrawer() {
+        drawer.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+      function toggleDrawer() {
+        var isOpen = drawer.classList.contains('open');
+        if (isOpen) {
+          closeDrawer();
+        } else {
+          drawer.classList.add('open');
+          burger.classList.add('open');
+          burger.setAttribute('aria-expanded', 'true');
+          drawer.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+      if (burger) burger.addEventListener('click', toggleDrawer);
+      if (drawer) {
+        drawer.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', closeDrawer);
+        });
+      }
+
+      // hero video
+      if (heroVideo) {
+        var setSlow = function () {
+          try { heroVideo.playbackRate = 0.7; } catch (e) {}
+        };
+        if (heroVideo.readyState >= 1) setSlow();
+        heroVideo.addEventListener('loadedmetadata', setSlow);
+
+        var tryPlay = function () {
+          var p = heroVideo.play();
+          if (p && typeof p.catch === 'function') p.catch(function () {});
+        };
+        tryPlay();
+        ['touchstart', 'click'].forEach(function (evt) {
+          document.addEventListener(evt, function once() {
+            tryPlay();
+            document.removeEventListener(evt, once);
+          }, { passive: true });
+        });
+        document.addEventListener('visibilitychange', function () {
+          if (document.hidden) heroVideo.pause();
+          else tryPlay();
+        });
+      }
+
+      // accordion
+      document.querySelectorAll('[data-accordion]').forEach(function (acc) {
+        acc.querySelectorAll('.acc-item').forEach(function (item) {
+          var head = item.querySelector('.acc-head');
+          var body = item.querySelector('.acc-body');
+          if (!head || !body) return;
+
+          head.addEventListener('click', function () {
+            var isOpen = item.classList.contains('open');
+
+            if (isOpen) {
+              body.style.maxHeight = body.scrollHeight + 'px';
+              requestAnimationFrame(function () { body.style.maxHeight = '0px'; });
+              item.classList.remove('open');
+              head.setAttribute('aria-expanded', 'false');
+            } else {
+              item.classList.add('open');
+              head.setAttribute('aria-expanded', 'true');
+              body.style.maxHeight = body.scrollHeight + 'px';
+              var onEnd = function (e) {
+                if (e.propertyName !== 'max-height') return;
+                if (item.classList.contains('open')) body.style.maxHeight = 'none';
+                body.removeEventListener('transitionend', onEnd);
+              };
+              body.addEventListener('transitionend', onEnd);
+            }
+          });
+        });
+      });
+
+      window.addEventListener('resize', function () {
+        document.querySelectorAll('.acc-item.open .acc-body').forEach(function (b) {
+          b.style.maxHeight = 'none';
+        });
+      });
+
+      // reveal on scroll
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        document
+          .querySelectorAll('section:not(.hero), .reveal-stagger')
+          .forEach(function (el) {
+            if (!el.classList.contains('reveal-stagger')) {
+              el.classList.add('reveal');
+            }
+            io.observe(el);
+          });
+      }
+    })();
+  </script>
+</body>
+</html>
